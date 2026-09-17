@@ -1,10 +1,28 @@
+import java.util.Scanner;
+
 public class Student {
-
     public static void main(String[] args) {
-        String name = "Neeraj";
-        int age = 21;
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Student Name: " + name);
-        System.out.println("Student Age: " + age);
+        System.out.print("Enter three numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        int greatest;
+
+        if (a >= b && a >= c) {
+            greatest = a;
+        } else if (b >= a && b >= c) {
+            greatest = b;
+        } else {
+            greatest = c;
+        }
+
+        System.out.println("Greatest number = " + greatest);
+
+        sc.close();
     }
 }
+
+
